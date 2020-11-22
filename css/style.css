@@ -1,0 +1,36 @@
+.select-wrapper {
+	max-width: 200px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.select {
+	width: 100%;
+	position: relative;
+}
+.select__header {
+	padding: 5px;
+	border: 2px solid green;
+	cursor: pointer;
+}
+.select__body {
+	border: 2px solid green;
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	transition: all 0.3s ease-out;
+	max-height: 0px;
+	overflow: hidden;
+	opacity: 0;
+	background-color: #fff;
+	z-index: 1;
+	box-sizing: border-box;
+}
+.select__item {
+	padding: 5px;
+	cursor: pointer;
+}
+
+.select.active .select__body {
+	max-height: 200px;
+	opacity: 1;
+}
